@@ -65,8 +65,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         if (value == null ||
                             value.isEmpty) {
                           return "Username cannot be empty";
-                        } else if (value.length < 6) {
-                          return "Username length should be atlest 6";
+                        } else if (value.length < 5) {
+                          return "Username length should be atlest 5";
                         }
 
                         return null;
@@ -132,21 +132,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-
-              // ElevatedButton(
-              //   style: ElevatedButton.styleFrom(
-              //     foregroundColor: Colors.white,
-              //     textStyle: TextStyle(fontSize: 16),
-              //     minimumSize: Size(110, 40),
-              //   ),
-              //   onPressed: () {
-              //     Navigator.pushNamed(
-              //       context,
-              //       MyRoutes.homeRoutes,
-              //     );
-              //   },
-              //   child: Text("Login"),
-              // ),
             ],
           ),
         ),
