@@ -6,7 +6,8 @@ class MyDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final imageUrl = "https://tinyurl.com/mwnnmbpk";
+    final imageUrl =
+        "https://media.licdn.com/dms/image/v2/D5603AQETfitLbrAFNA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1694279586932?e=1749686400&v=beta&t=0mGjzbLWFst_XcR4fXf-MzwzhpcOWrDNtb40g6-HhUU";
     return Drawer(
       backgroundColor: Colors.deepPurple[200],
       child: ListView(
