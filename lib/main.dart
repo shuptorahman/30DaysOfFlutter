@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.homeRoutes: (context) => HomeScreen(),
         MyRoutes.loginRoutes: (context) => LoginScreen(),
       },
+      
     );
   }
 }
