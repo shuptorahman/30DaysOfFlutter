@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class MyTheme {
   static ThemeData get lightTheme => ThemeData(
@@ -7,6 +8,15 @@ class MyTheme {
     fontFamily: GoogleFonts.poppins().fontFamily,
     iconTheme: IconThemeData(color: Colors.black),
     appBarTheme: AppBarTheme(color: Colors.white),
+    colorScheme: ColorScheme.fromSwatch(
+      primarySwatch: Colors.deepPurple,
+    ).copyWith(
+      secondary:
+          darkBlueishColor, // এখানেই FloatingActionButton এর রঙ সেট
+    ),
+
+    cardColor: Colors.white,
+    canvasColor: creamColor,
     textTheme: TextTheme(
       titleLarge: TextStyle(
         color: Colors.black,
@@ -16,10 +26,37 @@ class MyTheme {
     ),
   );
 
-  static ThemeData get darkTheme =>
-      ThemeData(brightness: Brightness.dark);
+  static ThemeData get darkTheme => ThemeData(
+    fontFamily: GoogleFonts.poppins().fontFamily,
+    iconTheme: IconThemeData(color: Colors.black),
+    appBarTheme: AppBarTheme(
+      color: Colors.black,
+      iconTheme: IconThemeData(color: Colors.white),
+    ),
+    colorScheme: ColorScheme.fromSwatch(
+      brightness: Brightness.dark,
+
+      primarySwatch: Colors.deepPurple,
+    ).copyWith(
+      secondary: lightBlueishColor,
+      // এখানেই FloatingActionButton এর রঙ সেট
+    ),
+
+    cardColor: Colors.black,
+    canvasColor: darkcreamColor,
+
+    textTheme: TextTheme(
+      titleLarge: TextStyle(
+        color: Colors.black,
+        fontSize: 22,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+  );
 
   //colors
   static Color creamColor = Color(0xfff5f5f5);
+  static Color darkcreamColor = Vx.gray900;
   static Color darkBlueishColor = Color(0xff403b58);
+  static Color lightBlueishColor = Vx.indigo500;
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/utils/myroutes.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -35,13 +36,13 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      color: context.canvasColor,
       child: SingleChildScrollView(
         child: Form(
           key: _formKey,
           child: Column(
             children: [
-              SizedBox(height: 50),
+              // SizedBox(height: 50),
               Image.asset("assets/images/welcome3.png"),
               SizedBox(height: 20),
               Text(
@@ -98,7 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               SizedBox(height: 40),
               Material(
-                color: Colors.deepPurple,
+                color: context.theme.colorScheme.secondary,
                 borderRadius: BorderRadius.circular(
                   changeButton ? 50 : 8,
                 ),

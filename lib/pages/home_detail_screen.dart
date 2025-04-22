@@ -16,7 +16,7 @@ class HomeDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child:
             OverflowBar(
               alignment: MainAxisAlignment.spaceBetween,
@@ -28,7 +28,7 @@ class HomeDetailScreen extends StatelessWidget {
                 ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor: WidgetStatePropertyAll(
-                      MyTheme.darkBlueishColor,
+                      context.theme.colorScheme.secondary,
                     ),
                   ),
                   onPressed: () {},
@@ -39,7 +39,7 @@ class HomeDetailScreen extends StatelessWidget {
             ).py32(),
       ),
       appBar: AppBar(backgroundColor: Colors.transparent),
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.theme.canvasColor,
       body: SafeArea(
         bottom: false,
         child: Column(
@@ -55,13 +55,16 @@ class HomeDetailScreen extends StatelessWidget {
                 arcType: VxArcType.convey,
                 child: Container(
                   width: context.screenWidth,
-                  color: Colors.white,
+                  color: context.cardColor,
                   child:
                       Column(
                         children: [
                           catalog.name.text.xl4
                               .color(
-                                MyTheme.darkBlueishColor,
+                                context
+                                    .theme
+                                    .colorScheme
+                                    .secondary,
                               )
                               .bold
                               .make(),

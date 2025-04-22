@@ -41,50 +41,67 @@ class CatalogItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return VxBox(
-      child: Row(
-        children: [
-          SizedBox(width: 10),
-          Hero(
-            tag: Key(catalog.id.toString()),
-            child: CatalogImage(image: catalog.image),
-          ),
-          SizedBox(width: 10),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                catalog.name.text.xl
-                    .color(MyTheme.darkBlueishColor)
-                    .bold
-                    .make(),
-                catalog.desc.text
-                    .textStyle(context.captionStyle)
-                    .make(),
-                OverflowBar(
-                  alignment: MainAxisAlignment.spaceBetween,
-
+          child: Row(
+            children: [
+              SizedBox(width: 10),
+              Hero(
+                tag: Key(catalog.id.toString()),
+                child: CatalogImage(image: catalog.image),
+              ),
+              SizedBox(width: 10),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment:
+                      CrossAxisAlignment.start,
+                  mainAxisAlignment:
+                      MainAxisAlignment.center,
                   children: [
-                    "\$${catalog.price}".text.xl.bold
+                    catalog.name.text.xl
+                        .color(
+                          context
+                              .theme
+                              .colorScheme
+                              .secondary,
+                        )
+                        .bold
                         .make(),
-                    ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor:
-                            WidgetStatePropertyAll(
-                              MyTheme.darkBlueishColor,
-                            ),
-                      ),
-                      onPressed: () {},
-                      child:
-                          "Add to cart".text.white.make(),
-                    ).pOnly(right: 8),
+                    catalog.desc.text
+                        .textStyle(context.captionStyle)
+                        .make(),
+                    OverflowBar(
+                      alignment:
+                          MainAxisAlignment.spaceBetween,
+
+                      children: [
+                        "\$${catalog.price}".text.xl.bold
+                            .make(),
+                        ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor:
+                                WidgetStatePropertyAll(
+                                  context
+                                      .theme
+                                      .colorScheme
+                                      .secondary,
+                                ),
+                          ),
+                          onPressed: () {},
+                          child:
+                              "Add to cart".text.white
+                                  .make(),
+                        ).pOnly(right: 8),
+                      ],
+                    ),
                   ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
-        ],
-      ),
-    ).white.rounded.square(150).make().py16();
+        )
+        .color(context.cardColor)
+        .rounded
+        .square(150)
+        .make()
+        .py16();
   }
 }
