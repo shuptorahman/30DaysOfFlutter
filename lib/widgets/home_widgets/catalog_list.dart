@@ -44,7 +44,10 @@ class CatalogItem extends StatelessWidget {
       child: Row(
         children: [
           SizedBox(width: 10),
-          Hero(tag: Key(catalog.id.toString()),child: CatalogImage(image: catalog.image)),
+          Hero(
+            tag: Key(catalog.id.toString()),
+            child: CatalogImage(image: catalog.image),
+          ),
           SizedBox(width: 10),
           Expanded(
             child: Column(
@@ -63,8 +66,7 @@ class CatalogItem extends StatelessWidget {
 
                   children: [
                     "\$${catalog.price}".text.xl.bold
-                        .make()
-                        .px8(),
+                        .make(),
                     ElevatedButton(
                       style: ButtonStyle(
                         backgroundColor:
@@ -73,7 +75,8 @@ class CatalogItem extends StatelessWidget {
                             ),
                       ),
                       onPressed: () {},
-                      child: "Buy".text.white.make(),
+                      child:
+                          "Add to cart".text.white.make(),
                     ).pOnly(right: 8),
                   ],
                 ),

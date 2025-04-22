@@ -7,8 +7,10 @@ import 'package:flutter_catalog/models/catalog.dart';
 
 class HomeDetailScreen extends StatelessWidget {
   final Item catalog;
-  const HomeDetailScreen({Key? key, required this.catalog})
-    : super(key: key);
+  const HomeDetailScreen({
+    super.key,
+    required this.catalog,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -30,12 +32,13 @@ class HomeDetailScreen extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {},
-                  child: "Buy".text.xl3.white.make(),
+                  child:
+                      "Add to cart".text.xl3.white.make(),
                 ).pOnly(right: 8),
               ],
             ).py32(),
       ),
-      appBar: AppBar(),
+      appBar: AppBar(backgroundColor: Colors.transparent),
       backgroundColor: MyTheme.creamColor,
       body: SafeArea(
         bottom: false,
@@ -67,6 +70,13 @@ class HomeDetailScreen extends StatelessWidget {
                                 context.captionStyle,
                               )
                               .make(),
+                          "Voluptua clita vero sed takimata ea nonumy, sit amet erat amet duo aliquyam dolores sadipscing, takimata ipsum no sed erat ipsum. Ipsum diam ipsum accusam invidunt dolore at, ipsum sadipscing ipsum sed sit justo et. Gubergren aliquyam voluptua nonumy ipsum elitr amet eos rebum gubergren. Rebum sadipscing nonumy accusam vero."
+                              .text
+                              .textStyle(
+                                context.captionStyle,
+                              )
+                              .make()
+                              .p16(),
                         ],
                       ).py64(),
                 ),
