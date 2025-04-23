@@ -6,7 +6,6 @@ import 'package:flutter_catalog/models/catalog.dart';
 import 'package:flutter_catalog/utils/myroutes.dart';
 import 'package:flutter_catalog/widgets/home_widgets/catalog_header.dart';
 import 'package:flutter_catalog/widgets/home_widgets/catalog_list.dart';
-import 'package:flutter_catalog/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -46,8 +45,15 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         backgroundColor:
-            context.theme.colorScheme.secondary,
-        foregroundColor: Colors.white,
+            context
+                .theme
+                .floatingActionButtonTheme
+                .backgroundColor,
+        foregroundColor:
+            context
+                .theme
+                .floatingActionButtonTheme
+                .foregroundColor,
         onPressed:
             () => Navigator.pushNamed(
               context,

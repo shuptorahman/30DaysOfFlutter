@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
           MyTheme
               .darkTheme, //adopting custom dark theme data from a blueprint through instance
       debugShowCheckedModeBanner: false,
-      initialRoute: MyRoutes.loginRoutes,
+      initialRoute: MyRoutes.homeRoutes,
       routes: {
         "/": (context) => LoginScreen(),
         MyRoutes.homeRoutes: (context) => HomeScreen(),

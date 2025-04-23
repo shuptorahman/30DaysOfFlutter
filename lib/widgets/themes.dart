@@ -14,6 +14,11 @@ class MyTheme {
       secondary:
           darkBlueishColor, // এখানেই FloatingActionButton এর রঙ সেট
     ),
+    floatingActionButtonTheme:
+        FloatingActionButtonThemeData(
+          backgroundColor: darkBlueishColor,
+          foregroundColor: Colors.white,
+        ),
 
     cardColor: Colors.white,
     canvasColor: creamColor,
@@ -30,7 +35,6 @@ class MyTheme {
     fontFamily: GoogleFonts.poppins().fontFamily,
     iconTheme: IconThemeData(color: Colors.black),
     appBarTheme: AppBarTheme(
-      color: Colors.black,
       iconTheme: IconThemeData(color: Colors.white),
     ),
     colorScheme: ColorScheme.fromSwatch(
@@ -41,6 +45,11 @@ class MyTheme {
       secondary: lightBlueishColor,
       // এখানেই FloatingActionButton এর রঙ সেট
     ),
+    floatingActionButtonTheme:
+        FloatingActionButtonThemeData(
+          backgroundColor: lightBlueishColor,
+          foregroundColor: Colors.white,
+        ),
 
     cardColor: Colors.black,
     canvasColor: darkcreamColor,
