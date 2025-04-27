@@ -8,7 +8,7 @@ class CatalogModel {
 
   //get item by id
 
-  static Item getById(int id) => items.firstWhere(
+   Item getById(int id) => items.firstWhere(
     (element) => element.id == id,
     orElse: //fallback item later i will handel this with null safety
         () => Item(
@@ -22,7 +22,7 @@ class CatalogModel {
   );
 
   //get item by position
-  static Item getItemByPosition(int pos) => items[pos];
+   Item getItemByPosition(int pos) => items[pos];
 }
 
 class Item {

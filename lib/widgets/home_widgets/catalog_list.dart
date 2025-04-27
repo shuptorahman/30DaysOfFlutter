@@ -12,9 +12,7 @@ class CatalogList extends StatelessWidget {
     return ListView.builder(
       shrinkWrap: true,
       itemBuilder: (context, index) {
-        final catalog = CatalogModel.getItemByPosition(
-          index,
-        );
+        final catalog = CatalogModel.items[index];
 
         return InkWell(
           onTap: () {
