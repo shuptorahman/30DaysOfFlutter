@@ -22,11 +22,12 @@ class _LoginScreenState extends State<LoginScreen> {
       });
       await Future.delayed(Duration(seconds: 1));
 
-      await Navigator.pushNamed(
-        context,
-        MyRoutes.homeRoutes,
-      );
-
+      if (context.mounted) {
+        await Navigator.pushNamed(
+          context,
+          MyRoutes.homeRoutes,
+        );
+      }
       setState(() {
         changeButton = false;
       });
